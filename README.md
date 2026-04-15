@@ -94,7 +94,9 @@ Este proyecto es una evidencia del aprendizaje y la práctica en el desarrollo b
 
 ![img secundaria](apiConSpringBoot/img/img-segundaria.png)
 
-Antes de ejecutar la aplicación, asegúrate de tener configuradas las variables de entorno y credenciales necesarias para conectar con la base de datos.
+> **⚠️ Recomendación:** 
+
+> antes de ejecutar la aplicación, asegúrate de crear el archivo `.env` en el directorio del proyecto con las variables de entorno necesarias. De esta manera, Docker podrá asociar correctamente las variables y credenciales para la conexión con la base de datos.
 
 
 ### Ejemplo de configuración MySQL en `application.properties`
@@ -116,7 +118,10 @@ server.port=8080
 
 ## Dockerización del proyecto
 
-> **⚠️ Recomendación:** revisa y ajusta, en caso de ser necesario, los archivos `Dockerfile` y `docker-compose.yml` de acuerdo con las necesidades de tu entorno.
+> **⚠️ Recomendación:** 
+
+> Revisa y ajusta, en caso de ser necesario, los archivos `Dockerfile` y `docker-compose.yml`.
+
 
 
 Para ejecutar y contenerizar este proyecto, se utilizan los archivos **Dockerfile** y **docker-compose.yml** presentes en el repositorio.
