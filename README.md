@@ -1,25 +1,25 @@
 # API Spring Boot
 
-![Portada del proyecto](apiConSpringBoot/img/portada.png)
+![Project cover](apiConSpringBoot/img/portada.png)
 
-## Descripción
+## Description
 
-Este repositorio contiene un **proyecto educativo** desarrollado con **Java** y **Spring Boot**, orientado a la construcción de una **API REST** moderna, funcional y estructurada bajo buenas prácticas de desarrollo backend.
+This repository contains an **educational project** developed with **Java** and **Spring Boot**, focused on building a modern, functional, and well-structured **REST API** following backend development best practices.
 
-El objetivo principal de este proyecto es **evidenciar conocimientos sólidos en backend**, especialmente en:
+The main goal of this project is to **demonstrate solid backend knowledge**, especially in:
 
 - **Java**
 - **Spring Boot**
-- **Diseño de APIs REST**
-- **Persistencia con MySQL**
-- **Uso de DTOs para transferencia de datos**
-- **Buenas prácticas en la construcción del código**
-- **Uso de Lombok para simplificar clases**
-- **Dockerización de la aplicación**
+- **REST API design**
+- **Persistence with MySQL**
+- **Using DTOs for data transfer**
+- **Good coding practices**
+- **Using Lombok to simplify classes**
+- **Dockerizing the application**
 
-Este proyecto representa un despliegue completo de una API REST, lo que demuestra capacidad para desarrollar soluciones backend listas para ser ejecutadas en entornos locales o contenerizados, como es en este caso.
+This project represents a complete REST API implementation, showing the ability to develop backend solutions ready to run in local or containerized environments, as is the case here.
 
-## Tecnologías utilizadas
+## Technologies used
 
 - Java
 - Spring Boot
@@ -30,76 +30,71 @@ Este proyecto representa un despliegue completo de una API REST, lo que demuestr
 - Maven
 - Lombok
 
-## Características del proyecto
+## Project features
 
-- API REST desarrollada con Spring Boot
-- Arquitectura organizada por capas
-- Separación de responsabilidades entre controladores, servicios, repositorios y DTOs
-- Persistencia de datos con MySQL
-- Transferencia de datos mediante **DTOs**
-- Uso de Lombok para reducir código repetitivo y mejorar la legibilidad
-- Código estructurado siguiendo buenas prácticas de desarrollo
-- Aplicación dockerizada para facilitar su despliegue
+- REST API developed with Spring Boot
+- Layered architecture
+- Separation of responsibilities between controllers, services, repositories, and DTOs
+- Data persistence with MySQL
+- Data transfer through **DTOs**
+- Use of Lombok to reduce repetitive code and improve readability
+- Structured code following development best practices
+- Dockerized application to simplify deployment
 
-## ¿Qué demuestra este proyecto?
+## What does this project demonstrate?
 
-Este proyecto demuestra conocimientos en:
+This project demonstrates knowledge in:
 
 ### Backend
-Capacidad para diseñar y desarrollar una API robusta, escalable y bien estructurada.
+Ability to design and develop a robust, scalable, and well-structured API.
 
 ### Java
-Dominio del lenguaje para implementar lógica de negocio clara, reutilizable y mantenible.
+Command of the language to implement clear, reusable, and maintainable business logic.
 
 ### Spring Boot
-Uso del ecosistema Spring para construir servicios backend de forma eficiente.
+Use of the Spring ecosystem to build backend services efficiently.
 
-### Base de datos MySQL
-Integración con una base de datos relacional para almacenamiento y gestión de información.
+### MySQL database
+Integration with a relational database for storing and managing information.
 
 ### DTOs
-Uso de objetos de transferencia de datos para evitar exponer directamente las entidades y mejorar la organización del código.
+Use of data transfer objects to avoid exposing entities directly and improve code organization.
 
 ### Lombok
-Uso de anotaciones para simplificar la construcción de clases, reduciendo código repetitivo y mejorando la mantenibilidad.
+Use of annotations to simplify class construction, reducing repetitive code and improving maintainability.
 
-### Buenas prácticas
-Aplicación de principios de limpieza de código, separación de capas y mantenibilidad.
+### Best practices
+Application of code cleanliness, layer separation, and maintainability principles.
 
 ### Docker
-Contenerización del proyecto, lo que facilita su ejecución y despliegue en distintos entornos.
+Containerization of the project, which makes it easier to run and deploy in different environments.
 
-## Estructura general
+## General structure
 
-La aplicación normalmente se organiza en capas como:
+The application is usually organized into layers such as:
 
-- `controller`: expone los endpoints de la API
-- `service`: contiene la lógica de negocio
-- `repository`: gestiona el acceso a datos
-- `entity`: representa los modelos persistidos
-- `dto`: maneja la transferencia de datos
-- `config`: contiene configuraciones adicionales
+- `controller`: exposes the API endpoints
+- `service`: contains the business logic
+- `repository`: handles data access
+- `entity`: represents persisted models
+- `dto`: handles data transfer
+- `config`: contains additional configurations
 
-Entre otras presentes en el proyecto.
+Among others present in the project.
 
+## Academic value
 
-## Valor académico
+This project is evidence of learning and practice in backend development with Java and Spring Boot. In addition, being dockerized, it shows a more complete and realistic view of the lifecycle of an application, from build to deployment.
 
-Este proyecto es una evidencia del aprendizaje y la práctica en el desarrollo backend con Java y Spring Boot. Además, al estar dockerizado, muestra una visión más completa y real del ciclo de vida de una aplicación, desde su construcción hasta su despliegue.
+## Environment setup
 
+![Secondary image](apiConSpringBoot/img/img-segundaria.png)
 
+> **⚠️ Recommendation:**
+>
+> Before running the application, make sure to create the `.env` file in the project directory with the required environment variables. This will allow Docker to correctly map the variables and credentials for the database connection.
 
-## Configuración del entorno
-
-
-![img secundaria](apiConSpringBoot/img/img-segundaria.png)
-
-> **⚠️ Recomendación:** 
-
-> antes de ejecutar la aplicación, asegúrate de crear el archivo `.env` en el directorio del proyecto con las variables de entorno necesarias. De esta manera, Docker podrá asociar correctamente las variables y credenciales para la conexión con la base de datos.
-
-
-### Ejemplo de configuración MySQL en `application.properties`
+### Example MySQL configuration in `application.properties`
 
 ```properties
 spring.application.name=apiSpringBoot
@@ -115,48 +110,39 @@ spring.jpa.show-sql=true
 server.port=8080
 ```
 
+## Project containerization
 
-## Dockerización del proyecto
+> **⚠️ Recommendation:**
+>
+> Review and adjust, if necessary, the `Dockerfile` and `docker-compose.yml` files.
 
-> **⚠️ Recomendación:** 
+To run and containerize this project, the **Dockerfile** and **docker-compose.yml** files present in the repository are used.
 
-> Revisa y ajusta, en caso de ser necesario, los archivos `Dockerfile` y `docker-compose.yml`.
+- **Dockerfile**: builds the application image.
+- **docker-compose.yml**: makes it easier to orchestrate the containers needed to start the API, such as the database and its dependencies.
 
+### Running with Docker
 
-
-Para ejecutar y contenerizar este proyecto, se utilizan los archivos **Dockerfile** y **docker-compose.yml** presentes en el repositorio.
-
-- **Dockerfile**: permite construir la imagen de la aplicación.
-  
-- **docker-compose.yml**: facilita la orquestación de los contenedores necesarios para levantar la API, como la base de datos y sus dependencias.
-
-
-
-### Ejecución con Docker
-
-1. Construye las imágenes del proyecto:
+1. Build the project images:
 ```bash
 
 docker compose build
 ```
 
-2. Levanta los contenedores
+2. Start the containers
 ```bash
 
 docker compose up -d
 ```
 
-3. Verifica que los servicios estén corriendo correctamente.
+3. Verify that the services are running correctly.
 
-4. La API quedará disponible según la configuración definidas en el docker-compose.yml.
+4. The API will be available according to the configuration defined in `docker-compose.yml`.
 
+## Acknowledgements
 
-## Agradecimientos
+I would like to thank **TodoCode Academy** for its valuable educational content, which contributed to my learning and the development of this educational project.
 
-Agradezco a **TodoCode Academy** por su valioso contenido formativo, el cual contribuyó a mi aprendizaje y al desarrollo de este proyecto educativo.
+## Author
 
-
-## Autor
-
-Desarrollado por SAMU0305.
-
+Developed by SAMU0305
